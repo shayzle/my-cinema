@@ -1,4 +1,4 @@
-# my-cinema
+# My Cinema : Epitech Project
 
 An administration dashboard for managing a cinema, built as part of my studies
 at Web@cadémie by Epitech.
