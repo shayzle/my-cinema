@@ -59,6 +59,7 @@ my-cinema/
 
 ## API endpoints
 
+<<<<<<< HEAD
 | Method | URL | Description |
 |--------|-----|-------------|
 | GET | /api/movies | Get all movies |
@@ -76,6 +77,30 @@ my-cinema/
 | POST | /api/screenings | Create a screening |
 | PUT | /api/screenings/:id | Update a screening |
 | DELETE | /api/screenings/:id | Delete a screening |
+=======
+1. Clone the repository and place the project in your server root:
+
+    htdocs/My_Cinema_Webacademie/
+
+2. Start MySQL and import the database:
+
+    Database/script.sql
+
+3. Configure the database connection file:
+
+    Back-End/config/database.php
+
+4. Use the following default credentials:
+
+    - Host: 127.0.0.1
+    - Database: my_cinema
+    - User: root
+    - Password: (empty)
+
+5. Start your local server and open your browser at:
+
+    http://127.0.0.1:8888/Projects/My_Cinema_Webacademie/Front-End/index.html
+>>>>>>> 4e24080cc51a6b9a140306ea599999eb7c8c7a99
 
 ---
 
