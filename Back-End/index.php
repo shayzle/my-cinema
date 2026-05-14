@@ -1,6 +1,8 @@
 <?php  
-    $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); 
-        // get requested URL path and parse it with parse_url function to extract the path component
+    // PATH_INFO is set by Apache when called as index.php/api/..., fall back to REQUEST_URI for PHP built-in server
+    $url = (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] !== '')
+        ? $_SERVER['PATH_INFO']
+        : parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     if (strpos($url, '/api') !== 0) {
         $file = __DIR__ . '/../Front-End' . ($url === '/' ? '/index.html' : $url); // map to FrontEnd directory and default to index.html

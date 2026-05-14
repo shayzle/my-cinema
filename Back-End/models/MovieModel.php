@@ -25,8 +25,8 @@ class movieModel {
     // CREATE movie
     public function create(array $data): bool {
         $stmt = $this->db->prepare(
-            "INSERT INTO movies (title, duration, release_year, description, genre, director)
-             VALUES (?, ?, ?, ?, ?, ?)"
+            "INSERT INTO movies (title, duration, release_year, description, genre, director, poster_url)
+             VALUES (?, ?, ?, ?, ?, ?, ?)"
         );
 
         return $stmt->execute([
@@ -35,7 +35,8 @@ class movieModel {
             $data['release_year'],
             $data['description'] ?? null,
             $data['genre'] ?? null,
-            $data['director'] ?? null
+            $data['director'] ?? null,
+            $data['poster_url'] ?? null
         ]);
     }
 
@@ -43,7 +44,7 @@ class movieModel {
     public function update(int $id, array $data): bool {
         $stmt = $this->db->prepare(
             "UPDATE movies
-             SET title = ?, duration = ?, release_year = ?, description = ?, genre = ?, director = ?
+             SET title = ?, duration = ?, release_year = ?, description = ?, genre = ?, director = ?, poster_url = ?
              WHERE id = ?"
         );
 
@@ -54,6 +55,7 @@ class movieModel {
             $data['description'] ?? null,
             $data['genre'] ?? null,
             $data['director'] ?? null,
+            $data['poster_url'] ?? null,
             $id
         ]);
     }
@@ -64,10 +66,3 @@ class movieModel {
         return $stmt->execute([$id]);
     }
 }
-
-// id
-// title
-// release_year
-// description
-// genre
-// director

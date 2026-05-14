@@ -2,50 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cinema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>My Cinema (Epitech Project)</h1>
+<header>
+    <h1>My Cinema</h1>
+    <p>Epitech Project</p>
+</header>
 
-<!-- movies -->
-<section class="card">
-    <h2>Movies <span id="badgeMovies">0</span></h2>
-    <div id="status"></div>
-    <input type="hidden" id="movieId">
-    <input id="movieTitle" placeholder="Title">
-    <input id="movieDescription" placeholder="Description">
-    <input id="movieDuration" type="number" placeholder="Duration">
-    <input id="movieYear" type="number" placeholder="Year">
-    <input id="movieGenre" placeholder="Genre">
-    <input id="movieDirector" placeholder="Director">
-    <button onclick="saveMovie()">Save movie</button>
-    <div id="moviesTable"></div>
-</section>
+<main>
 
-<!-- rooms -->
-<section class="card">
-    <h2>Rooms</h2>
-    <input type="hidden" id="roomId">
-    <input id="roomName" placeholder="Name">
-    <input id="roomCapacity" type="number" placeholder="Capacity">
-    <input id="roomType" placeholder="Type">
-    <button onclick="saveRoom()">Save room</button>
-    <div id="roomsTable"></div>
-</section>
+    <!-- FILMS -->
+    <section id="section-movies">
+        <div class="section-top">
+            <h2>Films <span id="badgeMovies">0</span></h2>
+            <div class="section-line"></div>
+        </div>
 
-<!-- screenings -->
-<section class="card">
-    <h2>Screenings</h2>
-    <input type="hidden" id="screeningId">
-    <input id="screeningMovie" type="number" placeholder="Movie ID">
-    <input id="screeningRoom" type="number" placeholder="Room ID">
-    <input id="screeningTime" type="datetime-local">
-    <button onclick="saveScreening()">Save screening</button>
-    <div id="screeningsTable"></div>
-</section>
+        <div class="form-box">
+            <input type="hidden" id="movieId">
+            <input id="movieTitle"       placeholder="Title">
+            <input id="movieDescription" placeholder="Description">
+            <input id="movieDuration"    type="number" placeholder="Duration (min)">
+            <input id="movieYear"        type="number" placeholder="Year">
+            <input id="movieGenre"       placeholder="Genre">
+            <input id="movieDirector"    placeholder="Director">
+            <input id="moviePoster"      placeholder="Poster URL">
+            <button class="btn-save" onclick="saveMovie()">Save</button>
+            <button class="btn-clear" onclick="resetMovieForm()">Clear</button>
+            <span id="status"></span>
+        </div>
 
+        <div id="moviesTable"></div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ROOMS -->
+    <section id="section-rooms">
+        <div class="section-top">
+            <h2>Rooms</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="form-box">
+            <input type="hidden" id="roomId">
+            <input id="roomName"     placeholder="Room name">
+            <input id="roomCapacity" type="number" placeholder="Capacity">
+            <input id="roomType"     placeholder="Type (IMAX, 3D, Normal)">
+            <input id="roomImage"    placeholder="Photo URL">
+            <button class="btn-save" onclick="saveRoom()">Save</button>
+            <button class="btn-clear" onclick="resetRoomForm()">Clear</button>
+        </div>
+
+        <div id="roomsTable"></div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SCREENINGS -->
+    <section id="section-screenings">
+        <div class="section-top">
+            <h2>Screenings</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="form-box">
+            <input type="hidden" id="screeningId">
+            <input id="screeningMovie" type="number" placeholder="Movie ID">
+            <input id="screeningRoom"  type="number" placeholder="Room ID">
+            <input id="screeningTime"  type="datetime-local">
+            <button class="btn-save" onclick="saveScreening()">Save</button>
+            <button class="btn-clear" onclick="resetScreeningForm()">Clear</button>
+        </div>
+
+        <div id="screeningsTable"></div>
+    </section>
+
+</main>
+
+<script src="js/api.js"></script>
 <script src="js/movies.js"></script>
 <script src="js/rooms.js"></script>
 <script src="js/screenings.js"></script>

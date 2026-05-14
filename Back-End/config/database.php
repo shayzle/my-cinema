@@ -3,14 +3,15 @@
 class Database {
 
     private $host = "127.0.0.1";
+    private $port = "8889";
     private $database_name = "my_cinema";
     private $username = "root";
-    private $password = "";
+    private $password = "root";
 
     public function connect() {
         try {
             $pdo = new PDO(
-                "mysql:host={$this->host};dbname={$this->database_name};charset=utf8mb4",
+                "mysql:host={$this->host};port={$this->port};dbname={$this->database_name};charset=utf8mb4",
                 $this->username,
                 $this->password,
                 [
