@@ -57,8 +57,3 @@ class roomController {
         echo json_encode(['message' => 'Room deleted']);
     }
 }
-
-// id
-// name
-// capacity
-// type
