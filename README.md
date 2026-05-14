@@ -16,10 +16,10 @@ Built as a solo school project at **Web@cadémie by Epitech**.
 
 ## Built with
 
-- **PHP 8** — backend with MVC architecture
-- **MySQL** — database with PDO
-- **HTML / CSS / JavaScript** — frontend, no frameworks
-- **MAMP** — local development server
+- **PHP 8**  backend with MVC architecture
+- **MySQL**  database with PDO
+- **HTML / CSS / JavaScript**  frontend, no frameworks
+- **MAMP**  local development server
 
 ---
 
@@ -150,4 +150,4 @@ Then open `http://localhost:8000`
 
 ## License
 
-MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
