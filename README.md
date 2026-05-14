@@ -55,7 +55,7 @@ and PDO for database security. This project was built for educational purposes o
 
 5. Start your local server and open your browser at:
 
-    http://127.0.0.1:8888/my-cinema/Front-End/index.html
+    http://127.0.0.1:8888/Projects/My_Cinema_Webacademie/Front-End/index.html
 
 ---
 
