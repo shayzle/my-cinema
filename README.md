@@ -3,7 +3,7 @@
 An admin dashboard to manage movies, rooms, and screenings for a cinema.
 Built as a solo school project at **Web@cadémie by Epitech**.
 
-[Click Here The Website](http://mycinema.infinityfreeapp.com/Front-End/index.html)
+[Click Here The Website !](http://mycinema.infinityfreeapp.com/Front-End/index.html)
 
 ---
 
